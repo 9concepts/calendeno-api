@@ -27,3 +27,5 @@ paths:
                   message:
                     type: string
                     example: hello
+                required:
+                  - "message"

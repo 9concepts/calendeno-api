@@ -1,0 +1,29 @@
+openapi: 3.0.3
+info:
+  title: Calendeno Backend
+  version: v0
+
+servers:
+  - url: http://localhost:3000/{api_version}
+    description: local server
+    variables:
+      api_version:
+        default: "v0"
+        enum:
+          - "v0"
+paths:
+  /:
+    get:
+      summary: Root
+      responses:
+        "200":
+          description: >
+            Return a JSON message.
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  message:
+                    type: string
+                    example: hello

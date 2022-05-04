@@ -11,11 +11,5 @@ jobs:
     runs-on: ubuntu-20.04
     steps:
       - uses: actions/checkout@v3
-      - uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 3.0.1
-          builder-cache: true
-      - name: Install gems
-        run: bundle
       - name: Run test
-        run: bundle exec rspec
+        run: docker compose run app bundle exec rspec

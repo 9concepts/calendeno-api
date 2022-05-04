@@ -1,5 +1,16 @@
 version: "3.9"
 services:
+  app:
+    container_name: calendeno-api
+    build:
+      context: ./
+      dockerfile: docker/Dockerfile
+    volumes:
+      - .:/app
+      - bundle:/usr/local/bundle/
+    ports:
+      - 3000:3000
+    command: bash docker/scripts/run_rails_server.sh
   doc:
     container_name: calendeno-v0-doc
     build:
@@ -15,3 +26,6 @@ services:
       context: .
       dockerfile: doc/redoc.dockerfile
     command: redoc-cli bundle openapi.yaml -o doc/index.html
+
+volumes:
+  bundle:

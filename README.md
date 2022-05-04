@@ -1,28 +1,21 @@
 # Calendeno API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## Documentation
 
-Things you may want to cover:
+https://calendeno.github.io/api/
 
-- Ruby version
+## Development
 
-- System dependencies
+### Run Redoc to preview API documentation
 
-- Configuration
+```bash
+docker compose up doc
+```
 
-- Database creation
+Then, preview server is running at http://localhost:18080/
 
-- Database initialization
-
-- How to run the test suite
+### Run tests
 
 ```bash
 bundle exec rspec
 ```
-
-- Services (job queues, cache servers, search engines, etc.)
-
-- Deployment instructions
-
-- ...

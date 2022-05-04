@@ -36,6 +36,9 @@ gem "bootsnap", require: false
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem "rack-cors"
 
+gem 'omniauth-google-oauth2' # For Google login
+gem 'omniauth-rails_csrf_protection' # For Google login
+
 group :development, :test do
   gem 'committee-rails'
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem

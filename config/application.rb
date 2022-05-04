@@ -23,5 +23,10 @@ module Calendeno
     # Middleware like session, flash, cookies can be added back manually.
     # Skip views, helpers and assets when generating a new resource.
     config.api_only = true
+
+    # Ref https://kossy-web-engineer.hatenablog.com/entry/2021/08/09/113943
+    config.session_store :cookie_store, key: '_interslice_session' # For Omniauth
+    config.middleware.use ActionDispatch::Cookies # # For Omniauth. Required for all session management
+    config.middleware.use ActionDispatch::Session::CookieStore, config.session_options # For Omniauth
   end
 end

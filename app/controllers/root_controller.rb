@@ -1,4 +1,4 @@
-class V0::RootController < ApplicationController
+class RootController < ApplicationController
   def index
     render json: {message: 'hello'}
   end

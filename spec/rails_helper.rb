@@ -70,7 +70,6 @@ RSpec.configure do |config|
   config.committee_options = {
     schema_path: Rails.root.join('openapi', 'v0', 'openapi.yaml').to_s,
     query_hash_key: 'rack.request.query_hash',
-    parse_response_by_content_type: false,
-    prefix: '/v0'
+    parse_response_by_content_type: false
   }
 end

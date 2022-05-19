@@ -16,6 +16,8 @@ services:
     build:
       context: .
       dockerfile: openapi/v0/Dockerfile
+    volumes:
+      - ./openapi/v0:/spec
     ports:
       - 18080:18080
     command: preview-docs --port=18080 --host=0.0.0.0 openapi.yaml

@@ -25,3 +25,10 @@ paths:
                     example: hello
                 required:
                   - "message"
+  /auth/google_oauth2:
+    get:
+      summary: Sign in
+      responses:
+        "302":
+          description: >
+            Sign in with a google account.

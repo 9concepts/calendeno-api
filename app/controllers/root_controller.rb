@@ -1,5 +1,5 @@
 class RootController < ApplicationController
   def index
-    render json: {message: 'hello'}
+    render json: {message: "hello"}
   end
 end

@@ -3,8 +3,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby "3.1.2"
 
+gem "alba" # JSON serializer
 gem "config"
 gem "mysql2" # For MariaDB
+gem "oj" # fast JSON parser for alba
 gem "omniauth-google-oauth2" # For Google login
 gem "omniauth-rails_csrf_protection" # For Google login
 

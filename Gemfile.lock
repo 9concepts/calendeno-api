@@ -127,6 +127,11 @@ GEM
       dry-schema (~> 1.9, >= 1.9.1)
     e2mmap (0.1.0)
     erubi (1.10.0)
+    factory_bot (6.2.1)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     faraday (2.2.0)
       faraday-net_http (~> 2.0)
       ruby2_keywords (>= 0.0.4)
@@ -314,6 +319,7 @@ DEPENDENCIES
   committee-rails
   config
   debug
+  factory_bot_rails
   mysql2
   omniauth-google-oauth2
   omniauth-rails_csrf_protection

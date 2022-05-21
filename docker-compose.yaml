@@ -10,7 +10,25 @@ services:
       - bundle:/usr/local/bundle/
     ports:
       - 3000:3000
-    command: bash docker/scripts/run_rails_server.sh
+    command:
+      [
+        "./docker/scripts/wait-for-it.sh",
+        "db:3306",
+        "--timeout=60",
+        "--strict",
+        "--",
+        "bash",
+        "docker/scripts/run_rails_server.sh",
+      ]
+    depends_on:
+      - db
+  db:
+    container_name: calendeno-db
+    image: mariadb:10.7.3
+    environment:
+      MARIADB_ROOT_PASSWORD: password
+    ports:
+      - 3306:3306
   doc:
     container_name: calendeno-v0-doc
     build:

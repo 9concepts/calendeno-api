@@ -12,4 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Run test
-        run: docker compose run app bundle exec rspec
+        run: |
+          docker compose run app bash -c "bin/rails db:create && bundle exec rspec"
+        env:
+          RAILS_ENV: test

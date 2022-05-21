@@ -16,3 +16,6 @@ jobs:
           docker compose run app bash -c "bin/rails db:create && bundle exec rspec"
         env:
           RAILS_ENV: test
+      - name: Run standard linter
+        run: |
+          docker compose run app rake standard
